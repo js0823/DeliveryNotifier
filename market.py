@@ -27,7 +27,7 @@ class AmazonBot:
     
     def checkAvailability(self, availabilities):
         # check if any slot is available
-        is_available=False
+        is_available = False
         for availability in availabilities:
             availability_innerHTML=availability.get_attribute('innerHTML').strip().lower()
             if availability_innerHTML != "not available":
@@ -41,7 +41,6 @@ class AmazonBot:
         slotsAvailable = False
         while not slotsAvailable:
             sleep(3)
-            self.foundAlert()
             slotsAvailable = self.checkAvailability(self.driver. \
                 find_elements_by_xpath("//div[@class='ufss-date-select-toggle-text-availability']"))
             
