@@ -13,9 +13,14 @@ I wrote this for myself as I became frustrated with Amazon not having enough tim
 
 # Prerequisite
 
-1. Requires chromedriver for chrome.
-2. Use selenium to navigate through webpage.
-3. Playing sound requires installing sox on Mac, or speech-dispatcher on Ubuntu.
+- Requires chromedriver for chrome.
+- Use selenium to navigate through webpage.
+
+## Mac
+
+- In order to make playsound package work on Mac, try running the following command on your favorite Python environment.
+
+pip install PyObjC pyObjC-core
 
 # How to use
 

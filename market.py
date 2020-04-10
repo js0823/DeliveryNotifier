@@ -5,8 +5,6 @@ from selenium.common.exceptions import NoSuchElementException
 from time import sleep
 import sys, os
 import random
-if sys.platform == "win32":
-    import winsound
 from playsound import playsound
 
 class AmazonBot:
@@ -16,12 +14,6 @@ class AmazonBot:
         self.driver = webdriver.Chrome(chrome_options=self.chrome_options)
     
     def foundAlert(self):
-        # if sys.platform == "win32":
-        #     winsound.Beep(440, 500)
-        # elif sys.platform == "linux" or sys.platform == "linux2":
-        #     os.system('spd-say "Slot found."')
-        # elif sys.platform == "darwin":
-        #     os.system('say "Slot found."')
         playsound("slotfound.mp3")
 
     def goToCart(self):
@@ -59,7 +51,7 @@ class AmazonBot:
             
             if not slotsAvailable:
                 randomTime = random.randrange(10, 100, 10)
-                print("Slot is not available. Trying again in {} seconds.".format(randomTime))
+                print("No slots available. Trying again in {} seconds.".format(randomTime))
                 sleep(randomTime)
                 self.driver.refresh()
         
