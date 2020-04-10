@@ -17,3 +17,6 @@ Auto food delivery refresher
 2. Use selenium to navigate through webpage.
 
 # How to use
+
+1. On mac, run "Google\ Chrome --remote-debugging-port=9222"
+2. Run "run.py"
