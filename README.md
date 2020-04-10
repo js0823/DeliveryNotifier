@@ -1,4 +1,4 @@
-# AutoFoodDelivery
+# Delivery Notifier
 Auto food delivery notifier.
 
 I wrote this for myself as I became frustrated with Amazon not having enough time slots to deliver my food amid the coronavirus crisis in New York.
