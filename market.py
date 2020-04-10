@@ -30,6 +30,7 @@ class AmazonBot:
         except NoSuchElementException:
             print("Could not access cart. Aborting")
             self.driver.quit()
+            exit()
     
     def checkAvailability(self, availabilities):
         # check if any slot is available
@@ -73,8 +74,9 @@ class AmazonFreshBot(AmazonBot):
             self.driver.find_element_by_name("proceedToALMCheckout-QW1hem9uIEZyZXNo").click()
             sleep(2)
         except NoSuchElementException:
-            print("Could not check out Amnazon Fresh page. Aborting.")
+            print("Could not check out Amazon Fresh page. Aborting.")
             self.driver.quit()
+            exit()
         
         try:
             print("Navigating to delivery page.")
@@ -83,6 +85,7 @@ class AmazonFreshBot(AmazonBot):
         except NoSuchElementException:
             print("Could not go to delivery page. Aborting.")
             self.driver.quit()
+            exit()
 
 class WholeFoodsBot(AmazonBot):
     def __init__(self):
@@ -96,6 +99,7 @@ class WholeFoodsBot(AmazonBot):
         except NoSuchElementException:
             print("Could not check out WholeFoods page. Aborting.")
             self.driver.quit()
+            exit()
         
         try:
             print("Navigating to substitution page.")
@@ -104,6 +108,7 @@ class WholeFoodsBot(AmazonBot):
         except NoSuchElementException:
             print("Could not go to substitution page. Aborting.")
             self.driver.quit()
+            exit()
         
         try:
             print("Navigating to delivery page.")
@@ -112,3 +117,4 @@ class WholeFoodsBot(AmazonBot):
         except NoSuchElementException:
             print("Could not go to delivery page. Aborting")
             self.driver.quit()
+            exit()

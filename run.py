@@ -14,7 +14,7 @@ def main():
     print(s)
     # choose market
     markets = ["Amazon Fresh", "WholeFoods"]
-    market = None
+    choice = None
     while True:
         print("Please choose a number for the market you wish to buy from. \n")
         for i, market in enumerate(markets):
@@ -25,12 +25,12 @@ def main():
         else:
             break
 
-    if market == '1':
+    if choice == '1':
         bot = AmazonFreshBot()
         bot.goToCart()
         bot.goToDeliveryPage()
         bot.run()
-    elif market == '2':
+    elif choice == '2':
         bot = WholeFoodsBot()
         bot.goToCart()
         bot.goToDeliveryPage()
