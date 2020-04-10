@@ -5,6 +5,9 @@ from selenium.common.exceptions import NoSuchElementException
 from time import sleep
 import sys, os
 import random
+if sys.platform == "win32":
+    import winsound
+from playsound import playsound
 
 class AmazonBot:
     def __init__(self):
@@ -12,6 +15,15 @@ class AmazonBot:
         self.chrome_options.add_experimental_option("debuggerAddress", "localhost:9222")
         self.driver = webdriver.Chrome(chrome_options=self.chrome_options)
     
+    def foundAlert(self):
+        # if sys.platform == "win32":
+        #     winsound.Beep(440, 500)
+        # elif sys.platform == "linux" or sys.platform == "linux2":
+        #     os.system('spd-say "Slot found."')
+        # elif sys.platform == "darwin":
+        #     os.system('say "Slot found."')
+        playsound("slotfound.mp3")
+
     def goToCart(self):
         # navigate to cart
         print("Going to Amazon Smile page.")
@@ -30,7 +42,7 @@ class AmazonBot:
         # check if any slot is available
         is_available = False
         for availability in availabilities:
-            availability_innerHTML=availability.get_attribute('innerHTML').strip().lower()
+            availability_innerHTML = availability.get_attribute('innerHTML').strip().lower()
             if availability_innerHTML != "not available":
                 is_available=True
                 break
@@ -51,17 +63,11 @@ class AmazonBot:
                 sleep(randomTime)
                 self.driver.refresh()
         
-        for _ in range(1000):
+        for _ in range(100):
             self.foundAlert()
             print("Slot is available!! Click now!")
             
         self.driver.quit()
-    
-    def foundAlert(self):
-        if sys.platform == "linux" or sys.platform == "linux2":
-            os.system('spd-say "Slot found."')
-        elif sys.platform == "darwin":
-            os.system('say "Slot found."')
 
 class AmazonFreshBot(AmazonBot):
     def __init__(self):
