@@ -18,5 +18,9 @@ Auto food delivery refresher
 
 # How to use
 
-1. On mac, run "Google\ Chrome --remote-debugging-port=9222"
-2. Run "run.py"
+1. Make sure chromedriver is working on your OS.
+2. Make sure you can access Chrome through your terminal.
+3. Close all Chrome.
+4a. For Mac OS, type "Google\ Chrome --remote-debugging-port=9222".
+4b. For Linux, type "google-chrome --remote-debugging-port=9222".
+5. Type "Python run.py" on your other terminal.
