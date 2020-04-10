@@ -17,8 +17,10 @@ def main():
 
     if market == '1':
         bot = AmazonFreshBot()
-    else:
-        exit()
+        bot.goToAvailabilityPage()
+        bot.run()
+    
+    exit()
 
 if __name__ == "__main__":
     main()
