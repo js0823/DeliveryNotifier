@@ -1,7 +1,7 @@
 # Delivery Notifier
 Auto food delivery notifier.
 
-I wrote this for myself as I became frustrated with Amazon not having enough time slots to deliver my food amid the coronavirus crisis in New York.
+I wrote this for myself as I became frustrated with Amazon not having enough time slots to deliver my food due to the coronavirus crisis in New York.
 
 Please note while it works on my testing environments, I haven't tested anywhere else.
 
