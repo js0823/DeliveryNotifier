@@ -6,6 +6,7 @@ I wrote this for myself as I became frustrated with Amazon not having enough tim
 # Current Progress
 
 - Currently working on Mac and Ubuntu only. No Windows testing yet.
+- Chrome is the only browser I am using right now.
 - Amazon Fresh and WholeFoods should both work up to navigating to delivery page.
 - Sound is very simple, and it will play it for 1000 times for now when delivery is available. Texting would be better but it costs from what I've googled so far.
 - Cannot test when delivery date is open, as I haven't encountered one single instance where the slot became available.
