@@ -4,6 +4,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.common.exceptions import NoSuchElementException
 from time import sleep
 import sys, os
+import random
 
 class AmazonBot:
     def __init__(self):
@@ -45,8 +46,9 @@ class AmazonBot:
                 find_elements_by_xpath("//div[@class='ufss-date-select-toggle-text-availability']"))
             
             if not slotsAvailable:
-                print("Slot is not available. Trying again in 15 seconds.")
-                sleep(15)
+                randomTime = random.randrange(10, 100, 10)
+                print("Slot is not available. Trying again in {} seconds.".format(randomTime))
+                sleep(randomTime)
                 self.driver.refresh()
         
         for _ in range(1000):
