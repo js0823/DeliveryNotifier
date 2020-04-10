@@ -3,9 +3,11 @@ Auto food delivery notifier.
 
 I wrote this for myself as I became frustrated with Amazon not having enough time slots to deliver my food amid the coronavirus crisis in New York.
 
+Please note while it works on my testing environments, I haven't tested anywhere else.
+
 # Current Progress
 
-- Currently working on Mac and Ubuntu only. No Windows testing yet.
+- Now works on Windows, Mac, and Ubuntu.
 - Chrome is the only browser I am using right now.
 - Amazon Fresh and WholeFoods should both work up to navigating to delivery page.
 - Sound is very simple, and it will play it for 1000 times for now when delivery is available. Texting would be better but it costs from what I've googled so far.
@@ -13,12 +15,14 @@ I wrote this for myself as I became frustrated with Amazon not having enough tim
 
 # Prerequisite
 
+- Python 3
 - Requires chromedriver for chrome.
 - Use selenium to navigate through webpage.
+- Uses playsound package to play mp3 alert.
 
 ## Mac
 
-- In order to make playsound package work on Mac, try running the following command on your favorite Python environment.
+- In order to make playsound package work on Mac, try running the following command on your favorite Python environment if it doesn't work.
 
 pip install PyObjC pyObjC-core
 
@@ -29,4 +33,5 @@ pip install PyObjC pyObjC-core
 3. Close all Chrome browser.
 4a. For Mac OS, type "Google\ Chrome --remote-debugging-port=9222".
 4b. For Linux, type "google-chrome --remote-debugging-port=9222".
+4c. For Windows, type "chrome --remote-debugging-port=9222".
 5. Type "Python run.py" on your other terminal.

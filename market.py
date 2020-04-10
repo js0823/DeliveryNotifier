@@ -6,6 +6,7 @@ from time import sleep
 import sys, os
 import random
 from playsound import playsound
+from datetime import datetime
 
 class AmazonBot:
     def __init__(self):
@@ -51,7 +52,8 @@ class AmazonBot:
             
             if not slotsAvailable:
                 randomTime = random.randrange(10, 100, 10)
-                print("No slots available. Trying again in {} seconds.".format(randomTime))
+                now = datetime.now().strftime("%H:%M:%S")
+                print("No slots available at {}. Trying again in {} seconds.".format(now, randomTime))
                 sleep(randomTime)
                 self.driver.refresh()
         
