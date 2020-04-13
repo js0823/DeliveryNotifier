@@ -7,7 +7,7 @@ Please note while it works on my testing environments, I haven't tested anywhere
 
 # Current Progress
 
-- Now works on Windows, Mac, and Ubuntu.
+- Now works on Windows and Mac.
 - Chrome is the only browser I am using right now.
 - Amazon Fresh and WholeFoods should both work up to navigating to delivery page.
 - Sound is very simple, and it will play it for 1000 times for now when delivery is available. Texting would be better but it costs from what I've googled so far.
@@ -15,7 +15,7 @@ Please note while it works on my testing environments, I haven't tested anywhere
 
 # TODO
 
-- Create one-file binaries for Mac, Windows, and Ubuntu for easier access and do a pre-release to the public.
+- Create one-file binaries for Windows and Mac for easier access and do a pre-release to the public.
 
 # Prerequisite
 
@@ -42,7 +42,7 @@ pip install PyObjC pyObjC-core
 1. Make sure chromedriver is working on your OS.
 2. Make sure you can access Chrome through your terminal.
 3. Close all Chrome browser.
-4a. For Mac OS, type "Google\ Chrome --remote-debugging-port=9222".
-4b. For Linux, type "google-chrome --remote-debugging-port=9222".
-4c. For Windows, type "chrome --remote-debugging-port=9222".
-5. Type "Python run.py" on your other terminal.
+4a. For Windows, type "chrome --remote-debugging-port=9222".
+4b. For Mac OS, type "Google\ Chrome --remote-debugging-port=9222".
+
+Type "Python run.py" on your other terminal, or just run the binary if you have them.
