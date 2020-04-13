@@ -30,7 +30,7 @@ Please note while it works on my testing environments, I haven't tested anywhere
 - To create binary, use pyinstaller package and run the following command
 
 Windows:
-pyinstaller --onefile --add-data 'assets/slotfound.mp3;.' run.py
+pyinstaller --onefile --add-data "assets/slotfound.mp3;." run.py
 
 Mac:
 pyinstaller --onefile --add-data 'assets/slotfound.mp3:.' run.py
