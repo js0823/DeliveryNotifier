@@ -15,7 +15,7 @@ Please note while it works on my testing environments, I haven't tested anywhere
 
 # TODO
 
-- Create one-file binaries for Mac, Windows, and Ubuntu for easier access.
+- Create one-file binaries for Mac, Windows, and Ubuntu for easier access and do a pre-release to the public.
 
 # Prerequisite
 
