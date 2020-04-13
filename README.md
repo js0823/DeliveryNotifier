@@ -24,6 +24,13 @@ Please note while it works on my testing environments, I haven't tested anywhere
 - Use selenium to navigate through webpage.
 - Uses playsound package to play mp3 alert.
 
+# Notes
+
+## Creating binaries
+- To create binary, use pyinstaller package and run the following command
+
+pyinstaller --onefile --add-data 'slotfound.mp3:.' run.py
+
 ## Mac
 
 - In order to make playsound package work on Mac, try running the following command on your favorite Python environment if it doesn't work.

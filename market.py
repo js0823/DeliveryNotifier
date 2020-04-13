@@ -15,7 +15,9 @@ class AmazonBot:
         self.driver = webdriver.Chrome(chrome_options=self.chrome_options)
     
     def foundAlert(self):
-        playsound("slotfound.mp3")
+        root_dir = os.path.abspath(os.path.dirname(__file__))
+        sound_path = os.path.join(root_dir, "slotfound.mp3")
+        playsound(sound_path)
 
     def goToCart(self):
         # navigate to cart
