@@ -36,11 +36,11 @@ pyinstaller --onefile --add-data 'assets/slotfound.mp3:.' run.py
 ```
 ## Mac
 
-```
 - In order to make playsound package work on Mac, try running the following command on your favorite Python environment if it doesn't work.
-
+```
 pip install PyObjC pyObjC-core
 ```
+
 # How to use
 
 1. Make sure chromedriver is working on your OS.
