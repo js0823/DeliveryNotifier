@@ -4,6 +4,7 @@ Auto food delivery notifier. It currently works on Amazon Fresh and WholeFoods.
 I wrote this for myself as I became frustrated with Amazon not having enough time slots to deliver my food due to the coronavirus crisis in New York.
 
 Please note while it works on my testing environments, I haven't tested anywhere else.
+I recommend trying the release version first.
 
 # Current Progress
 
@@ -12,10 +13,7 @@ Please note while it works on my testing environments, I haven't tested anywhere
 - Amazon Fresh and WholeFoods should both work up to navigating to delivery page.
 - Sound is very simple, and it will play it for 1000 times for now when delivery is available. Texting would be better but it costs from what I've googled so far.
 - Cannot test when delivery date is open, as I haven't encountered one single instance where the slot became available.
-
-# TODO
-
-- Create one-file binaries for Windows and Mac for easier access and do a pre-release to the public.
+- Created first pre-release to the public.
 
 # Prerequisite
 
@@ -28,15 +26,13 @@ Please note while it works on my testing environments, I haven't tested anywhere
 
 ## Creating binaries
 - To create binary, use pyinstaller package and run the following command
-
+`
 Windows:
 pyinstaller --onefile --add-data "assets/slotfound.mp3;." run.py
 
 Mac:
 pyinstaller --onefile --add-data 'assets/slotfound.mp3:.' run.py
-
-
-
+`
 ## Mac
 
 - In order to make playsound package work on Mac, try running the following command on your favorite Python environment if it doesn't work.
