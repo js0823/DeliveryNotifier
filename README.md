@@ -9,9 +9,10 @@ I recommend trying the release version first.
 # Current Progress
 
 - Now works on Windows and Mac.
-- Chrome is the only browser I am using right now.
+- Chrome is the only browser that works for now.
 - Amazon Fresh and WholeFoods should both work up to navigating to delivery page.
 - Sound is very simple, and it will play it for 1000 times for now when delivery is available. Texting would be better but it costs from what I've googled so far.
+- Delivery notification is now tested. The program should now navigate from the homepage to the delivery page, and keep checking if delivery date is available, and alert when it is.
 - Created first pre-release to the public.
 
 # Prerequisite
@@ -20,25 +21,6 @@ I recommend trying the release version first.
 - Requires chromedriver for chrome.
 - Use selenium to navigate through webpage.
 - Uses playsound package to play mp3 alert.
-
-# Notes
-
-## Creating binaries
-- To create binary, use pyinstaller package and run the following command
-
-```
-Windows:
-pyinstaller --onefile --add-data "assets/slotfound.mp3;." run.py
-
-Mac:
-pyinstaller --onefile --add-data 'assets/slotfound.mp3:.' run.py
-```
-## Mac
-
-- In order to make playsound package work on Mac, try running the following command on your favorite Python environment if it doesn't work.
-```
-pip install PyObjC pyObjC-core
-```
 
 # How to use
 
