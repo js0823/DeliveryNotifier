@@ -1,4 +1,4 @@
-# Delivery Notifier
+# Food Delivery Notifier
 Auto food delivery notifier. It currently works on Amazon Fresh and WholeFoods.
 
 I wrote this for myself as I became frustrated with Amazon not having enough time slots to deliver my food due to the coronavirus crisis in New York.
