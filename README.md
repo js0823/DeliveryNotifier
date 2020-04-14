@@ -48,5 +48,4 @@ pip install PyObjC pyObjC-core
 3. Close all Chrome browser.
 4a. For Windows, type "chrome --remote-debugging-port=9222".
 4b. For Mac OS, type "Google\ Chrome --remote-debugging-port=9222".
-
-Type "Python run.py" on your other terminal, or just run the binary if you have them.
+5. Type "Python run.py" on your other terminal, or just run the binary if you downloaded them from the release.
