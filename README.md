@@ -24,9 +24,22 @@ I recommend trying the release version first.
 
 # How to use
 
+If you want to run using Python, use the "requirements.txt" to install Python packages. You can run by running the command
+
+```
+pip install -r requirements.txt
+```
+
 1. Make sure chromedriver is working on your OS.
 2. Make sure you can access Chrome through your terminal.
 3. Close all Chrome browser.
-4a. For Windows, type "chrome --remote-debugging-port=9222".
-4b. For Mac OS, type "Google\ Chrome --remote-debugging-port=9222".
+
+4a. For Windows, type 
+```
+chrome --remote-debugging-port=9222
+```
+4b. For Mac OS, you must have Google Chrome in your PATH environment variable. Then type:
+```
+Google\ Chrome --remote-debugging-port=9222
+```
 5. Type "Python run.py" on your other terminal, or just run the binary if you downloaded them from the release.
