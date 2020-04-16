@@ -40,6 +40,6 @@ chrome --remote-debugging-port=9222
 ```
 4b. For Mac OS, you must have Google Chrome in your PATH environment variable. Then type:
 ```
-Google\ Chrome --remote-debugging-port=9222".
+Google\ Chrome --remote-debugging-port=9222
 ```
 5. Type "Python run.py" on your other terminal, or just run the binary if you downloaded them from the release.
