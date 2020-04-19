@@ -1,7 +1,7 @@
 # Grocery Delivery Notifier
 Auto grocery delivery notifier. It currently works on Amazon Fresh and WholeFoods.
 
-I wrote this for myself as I became frustrated with Amazon not having enough time slots to deliver my food due to the coronavirus crisis in New York.
+I wrote this for myself as I became frustrated with Amazon not having enough time slots to deliver my groceries due to the coronavirus crisis in New York.
 
 Please note while it works on my testing environments, I haven't tested anywhere else.
 I recommend trying the release version first.
