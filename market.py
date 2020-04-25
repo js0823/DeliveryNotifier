@@ -5,19 +5,25 @@ from selenium.common.exceptions import NoSuchElementException
 from time import sleep
 import sys, os
 import random
-from playsound import playsound
 from datetime import datetime
+import pygame
 
 class AmazonBot:
     def __init__(self):
         self.chrome_options = Options()
         self.chrome_options.add_experimental_option("debuggerAddress", "localhost:9222")
         self.driver = webdriver.Chrome(chrome_options=self.chrome_options)
+        self.musicSet = False
     
     def foundAlert(self):
-        root_dir = os.path.abspath(os.path.dirname(__file__))
-        sound_path = os.path.join(root_dir, "slotfound.mp3")
-        playsound(sound_path)
+        if not self.musicSet:
+            root_dir = os.path.abspath(os.path.dirname(__file__))
+            sound_path = os.path.join(root_dir, "assets/slotfound.mp3")
+            pygame.mixer.init()
+            pygame.mixer.music.load(sound_path)
+            self.musicSet = True
+
+        pygame.mixer.music.play()
 
     def goToCart(self):
         # navigate to cart
@@ -53,7 +59,6 @@ class AmazonBot:
     def run(self):
         # run the bot
         slotsAvailable = False
-        self.foundAlert()
         while not slotsAvailable:
             sleep(2)
             slotsAvailable = self.checkAvailability(self.driver. \
@@ -68,6 +73,7 @@ class AmazonBot:
         
         for _ in range(100):
             self.foundAlert()
+            sleep(2)
             print("Slot is available!! Click now!")
             
         self.driver.quit()
