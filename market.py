@@ -37,6 +37,11 @@ class AmazonBot:
     def checkAvailability(self, availabilities):
         # check if any slot is available
         is_available = False
+        if not availabilities:
+            print("Something happened to the delivery page. Please check again.")
+            self.driver.quit()
+            exit()
+
         for availability in availabilities:
             availability_innerHTML = availability.get_attribute('innerHTML').strip().lower()
             if availability_innerHTML != "not available":
@@ -48,13 +53,14 @@ class AmazonBot:
     def run(self):
         # run the bot
         slotsAvailable = False
+        self.foundAlert()
         while not slotsAvailable:
-            sleep(3)
+            sleep(2)
             slotsAvailable = self.checkAvailability(self.driver. \
                 find_elements_by_xpath("//div[@class='ufss-date-select-toggle-text-availability']"))
             
             if not slotsAvailable:
-                randomTime = random.randrange(10, 100, 10)
+                randomTime = random.randrange(10, 60, 10)
                 now = datetime.now().strftime("%H:%M:%S")
                 print("No slots available at {}. Trying again in {} seconds.".format(now, randomTime))
                 sleep(randomTime)
