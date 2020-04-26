@@ -30,6 +30,17 @@ If you want to run using Python, use the "requirements.txt" to install Python pa
 pip install -r requirements.txt
 ```
 
+If you want to install required packages manually, below are two packages that are used to run.
+
+```
+Selenium
+pygame
+```
+
+To install chromedriver, best would be to go to the official website [here](https://chromedriver.chromium.org/downloads)
+
+Next, follow the steps below.
+
 1. Make sure chromedriver is working on your OS.
 2. Make sure you can access Chrome through your terminal.
 3. Close all Chrome browser.
