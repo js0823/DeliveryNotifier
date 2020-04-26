@@ -65,7 +65,7 @@ class AmazonBot:
                 find_elements_by_xpath("//div[@class='ufss-date-select-toggle-text-availability']"))
             
             if not slotsAvailable:
-                randomTime = random.randrange(10, 60, 10)
+                randomTime = random.randrange(10, 60, 5)
                 now = datetime.now().strftime("%H:%M:%S")
                 print("No slots available at {}. Trying again in {} seconds.".format(now, randomTime))
                 sleep(randomTime)
