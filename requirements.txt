@@ -6,8 +6,6 @@ cffi==1.14.0
 cryptography==2.8
 decorator==4.4.2
 idna==2.9
-ipython==7.13.0
-ipython-genutils==0.2.0
 jedi==0.16.0
 macholib==1.11
 parso==0.6.2
@@ -19,7 +17,6 @@ pycparser==2.20
 pycrypto==2.6.1
 pygame==1.9.6
 Pygments==2.6.1
-PyInstaller==3.5
 pyOpenSSL==19.1.0
 PySocks==1.7.1
 selenium==3.141.0
