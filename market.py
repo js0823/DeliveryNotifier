@@ -18,7 +18,7 @@ class AmazonBot:
     def foundAlert(self):
         if not self.musicSet:
             root_dir = os.path.abspath(os.path.dirname(__file__))
-            sound_path = os.path.join(root_dir, "assets/slotfound.mp3")
+            sound_path = os.path.join(root_dir, "slotfound.mp3")
             pygame.mixer.init()
             pygame.mixer.music.load(sound_path)
             self.musicSet = True
@@ -74,8 +74,8 @@ class AmazonBot:
         
         for _ in range(100):
             self.foundAlert()
-            sleep(2)
             print("Slot is available!! Click now!")
+            sleep(2)
             
         self.driver.quit()
 
