@@ -44,7 +44,8 @@ class AmazonBot:
         # check if any slot is available
         is_available = False
         if not availabilities:
-            print("Something happened to the delivery page. Please check again.")
+            print("Delivery date availability could not be found on the page.")
+            print("Please check whether current webpage is the delivery webpage. Aborting.")
             self.driver.quit()
             exit()
 
